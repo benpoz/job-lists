@@ -9,7 +9,7 @@ const Navbar = () => {
                 </div>
                 <div>
                     <a href="/home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">Jobssss</a><br/>
-                    <span class="text-xs text-grey-dark">Get Your Jobs Here</span>
+                    <span class="text-xs text-blue-dark">Get Your Jobs Here</span>
                 </div>
             </div>
             <div class="sm:mb-0 self-center">
