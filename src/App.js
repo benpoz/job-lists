@@ -19,12 +19,23 @@ function App() {
       title: 'bigboy',
       department: 'boyz',
       tags: ['bosses', 'bros']
+    },
+    {
+      id: 3,
+      company: 'Sheeping',
+      location: 'LOCATION',
+      title: 'title',
+      department: 'department',
+      tags: ['tag1', 'tag2','tag3']
     }
   ]  
+
     return(
       <>
         <Navbar/>
-        <List jobs={jobs}/>
+        <div className='w-full flex flex-col content-center items-center'>
+          <List jobs={jobs}/>
+        </div>
       </>
       
     )
