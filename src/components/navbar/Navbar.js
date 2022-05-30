@@ -8,7 +8,7 @@ const Navbar = () => {
                     <img alt="logo" className="h-10 w-10 self-center" src="https://csscomps.com/images/csscomps.png" />
                 </div>
                 <div>
-                    <a href="/home" className="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">Jobssss</a><br/>
+                    <a href="/" className="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">Jobssss</a><br/>
                     <span className="text-xs text-blue-dark">Get Your Jobs Here</span>
                 </div>
             </div>
