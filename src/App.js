@@ -1,14 +1,14 @@
 import React from 'react';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   // Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  // Link
+} from "react-router-dom";
 import List from './components/list/List';
 import Navbar from './components/navbar/Navbar';
 
-export default function App() {
+function App() {
   const jobs = [
     {
       id: 1,
@@ -35,32 +35,34 @@ export default function App() {
       tags: ['tag1', 'tag2','tag3']
     }
   ]  
- return (
-  <>
-    <Navbar />
-    <div className='w-full flex flex-col content-center items-center'>
-      <List jobs={jobs} />
-    </div>
-  </>
- )
-  // return (
-  //   <Router>
-  //     <div>
-  //       <Routes>
-  //         <Route path="/contact">
-  //         </Route>
-  //         <Route path="/company/:id">
-  //         </Route>
-  //         <Route path="/companies">
-  //         </Route>
-  //         <Route exact path="/">
-  //             <Navbar />
-  //             <div className='w-full flex flex-col content-center items-center'>
-  //               <List jobs={jobs} />
-  //             </div>
-  //         </Route>
-  //       </Routes>
-  //     </div>  
-  //   </Router>     
-  // )
+//  return (
+//   <>
+//     <Navbar />
+//     <div className='w-full flex flex-col content-center items-center'>
+//       <List jobs={jobs} />
+//     </div>
+//   </>
+//  )
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/contact">
+          </Route>
+          <Route path="/company/:id">
+          </Route>
+          <Route path="/companies">
+          </Route>
+          <Route exact path="/" element={
+              <div className='w-full flex flex-col content-center items-center'>
+                <List jobs={jobs} />
+              </div>}>
+          </Route>
+        </Routes>
+      </div>  
+    </Router>     
+  )
 }
+
+export default App
