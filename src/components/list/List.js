@@ -3,7 +3,7 @@ import Jobcard from '../jobcard/Jobcard';
 
 const List = ({jobs}) => {
     return (
-		<div className="w-7/12 py-40"> 
+		<div className="w-7/12 pt-10 pb-40"> 
 			{
 				jobs.map((job, i) => {
                     return (
@@ -14,6 +14,7 @@ const List = ({jobs}) => {
 							title={jobs[i].title} 
 							tags={jobs[i].tags} 
 							department={jobs[i].department}
+							link={jobs[i].link}
 						/>
 					)
 				})
