@@ -11,7 +11,7 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Filter from './components/filters/Filter';
 
-// const base = new Airtable({apiKey: 'keyPGXsyW1ZBtHYod'}).base('appJMDZ1Kbafseu4o');
+// const base = new Airtable({apiKey: ''}).base('appJMDZ1Kbafseu4o');
 
 function App () {
     
