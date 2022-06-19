@@ -1,11 +1,12 @@
 import React from "react";
 // import {Link} from "react-router-dom"
 
-const Jobcard = ({location,title,department,tags,link}) => {
+const Jobcard = ({location,title,department,tags,image,link}) => {
+   
     return ( 
         <div className="w-full grid grid-cols-12 gap-4 border-2 p-3">
-            <div className="col-span-3">
-                <img className='h-auto justify-self-center self-center w-40' alt='company' src='https://i.pinimg.com/originals/11/1c/ed/111ced0656a96d39566677a709622a58.jpg'></img>
+            <div className="col-span-3 flex justify-center">
+                <img className='h-auto justify-self-center self-center w-40' alt='company' src={image}></img>
             </div>
             {/* <div className="col-span-5">
                 <h3>Company: {company}</h3>

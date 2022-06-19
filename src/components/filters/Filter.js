@@ -6,7 +6,7 @@ const Filter = ({jobs}) => {
         return ([].concat.apply([], arr))
     }
     const taggs = jobs.map((job, i) => {
-        return jobs[i].tags
+        return jobs[i].field
     })
     const merged = mergeTags(taggs)    
     
@@ -34,11 +34,8 @@ const Filter = ({jobs}) => {
     }
     const filteredLocations = filterLocation(jobs)
     console.log('filter:',filteredLocations)
-    const filteredJobs = jobs.filter(function(el, i) {
-        do {
-            return el.location === filteredLocations[i];
-        }
-        while (filteredLocations.length >= i)
+    const filteredJobs = jobs.filter(el => {
+        return filteredLocations.includes(el.location);
     })
     console.log('filtered:',filteredJobs)
     
