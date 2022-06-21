@@ -11,36 +11,7 @@ import Footer from './components/footer/Footer';
 import Filter from './components/filters/Filter';
 
 function App () {
-    
-  // const jobs = [
-  //   {
-  //     id: 1,
-  //     link: "https://www.pictureofhotdog.com/",
-  //     company: 'Sheeping',
-  //     location: 'TLV',
-  //     title: 'bossman',
-  //     department: 'bosses',
-  //     tags: ['execs', 'bosses']
-  //   },
-  //   {
-  //     id: 2,
-  //     link: "https://www.miniclip.com/",
-  //     company: 'Sheeping',
-  //     location: 'NEVERLAND',
-  //     title: 'bigboy',
-  //     department: 'boyz',
-  //     tags: ['bosses', 'bros']
-  //   },
-  //   {
-  //     id: 3,
-  //     link: "https://www.google.com/",
-  //     company: 'Sheeping',
-  //     location: 'LOCATION',
-  //     title: 'title',
-  //     department: 'department',
-  //     tags: ['tag1', 'tag2','tag3']
-  //   }
-  // ]
+  
   const jobs = []
   
   const getJobs = () => {
@@ -49,14 +20,13 @@ function App () {
       headers: {'Content-Type': 'application/json'}})
     .then(response => response.json())
     .then((data) => {
-      data.map((job, i) => {
-        jobs.unshift(job)
+      data.map((job) => {
+        return jobs.push(job)
       })
     })
   }
-
+  
   getJobs()
-  console.log(jobs)
 
   return (
     <Router>
